@@ -9,8 +9,7 @@ Simple Spring/Angular web application to display and manage a list of support ti
 * can delete a ticket
 * after editing a ticket, the date of the last modification is updated automatically
 
-Tickets can be displayed in different status columns on a board
-Tickets can be moved between the columns
+![Screenshot](screenshot.png?raw=true "Title")
 
 # TODO 
 
