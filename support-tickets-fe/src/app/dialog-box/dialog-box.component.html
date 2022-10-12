@@ -1,0 +1,29 @@
+<h1 mat-dialog-title><strong>{{action}}</strong> ticket</h1>
+<div mat-dialog-content>
+
+  <mat-form-field *ngIf="action != 'Delete'; else elseTemplate" class="full-width" color="accent">
+    <input placeholder="{{action}} Title " matInput [(ngModel)]="local_data.title">
+  </mat-form-field>
+
+  <mat-form-field *ngIf="action != 'Delete';" class="full-width" color="accent">
+    <mat-label>Description</mat-label>
+    <textarea matInput [(ngModel)]="local_data.description" cdkTextareaAutosize placeholder="Describe the case ..."></textarea>
+  </mat-form-field>
+
+  <mat-form-field *ngIf="action != 'Delete';" class="full-width" color="accent">
+    <mat-label>State</mat-label>
+    <mat-select [(ngModel)]="local_data.status">
+      <mat-option *ngFor="let state of ticketStateEnumKeys" [value]="state">
+        {{ state }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <ng-template #elseTemplate>
+    Sure to delete <b>{{local_data.title}}</b>?
+  </ng-template>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="doAction()" mat-flat-button [color]="action != 'Delete' ? 'accent' : 'warn' ">{{action}}</button>
+  <button mat-button (click)="closeDialog()" mat-flat-button color="basic">Cancel</button>
+</div>
