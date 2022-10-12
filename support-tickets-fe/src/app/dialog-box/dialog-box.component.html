@@ -2,7 +2,7 @@
 <div mat-dialog-content>
 
   <mat-form-field *ngIf="action != 'Delete'; else elseTemplate" class="full-width" color="accent">
-    <input placeholder="{{action}} Title " matInput [(ngModel)]="local_data.title">
+    <input placeholder="{{action}} Title " maxlength="255" matInput [(ngModel)]="local_data.title" >
   </mat-form-field>
 
   <mat-form-field *ngIf="action != 'Delete';" class="full-width" color="accent">
@@ -10,7 +10,7 @@
     <textarea matInput [(ngModel)]="local_data.description" cdkTextareaAutosize placeholder="Describe the case ..."></textarea>
   </mat-form-field>
 
-  <mat-form-field *ngIf="action != 'Delete';" class="full-width" color="accent">
+  <mat-form-field *ngIf="action != 'Delete' && action != 'Add';" class="full-width" color="accent">
     <mat-label>State</mat-label>
     <mat-select [(ngModel)]="local_data.status">
       <mat-option *ngFor="let state of ticketStateEnumKeys" [value]="state">

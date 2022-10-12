@@ -20,13 +20,13 @@ table {
 }
 
 .mat-column-title {
-    max-width: 260px;
+    max-width: 250px;
 }
 
 .mat-column-action {
-    max-width: 145px;
+    max-width: 150px;
 }
 
 .mat-column-action button {
-    margin-right: 10px;
+    margin-right: 8px;
 }
