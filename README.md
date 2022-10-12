@@ -16,3 +16,4 @@ Simple Spring/Angular web application to display and manage a list of support ti
 * currently is used in-memory database ( = data are not persistent after the server is stopped)
 * dashboard with 3 state columns, tickets can be moved between the columns
 * paging, sorting and filtering on the ticket table
+* validation of input data from ticket form
