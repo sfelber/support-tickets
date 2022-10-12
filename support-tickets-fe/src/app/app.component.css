@@ -5,3 +5,28 @@ table {
 .flat {
     border-radius: 0;
 }
+
+.truncate-cell {
+    max-width: 260px;
+    /* feel free to include any other value */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.mat-cell {
+    padding: 0px 18px 0px 0;
+}
+
+.mat-column-title {
+    max-width: 260px;
+}
+
+.mat-column-action {
+    max-width: 145px;
+}
+
+.mat-column-action button {
+    margin-right: 10px;
+}
